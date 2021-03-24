@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "8c4e1b6e-4841-44a0-87c3-16f060bb13ab"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -7,7 +10,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
-          "strict": true
+          "strict": false
         }
       },
       "root": "",
@@ -28,9 +31,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/fullcalendar/dist/fullcalendar.min.css",
+  "node_modules/fullcalendar-scheduler/dist/scheduler.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/fullcalendar/dist/fullcalendar.min.js",
+              "./node_modules/fullcalendar-scheduler/dist/scheduler.min.js"
+            ]
           },
           "configurations": {
             "production": {
